@@ -1,0 +1,196 @@
+/* =========================================================
+   TIGER BAR 136 - MENU STYLES
+   Edit colours, type, spacing, and mobile layout here.
+   ========================================================= */
+
+/* 1. Design tokens */
+:root {
+  --black: #090908;
+  --gold: #d7a92f;
+  --gold-light: #f2d276;
+  --cream: #f6f1e6;
+  --muted: #bdb5a2;
+  --line: rgba(215, 169, 47, 0.38);
+}
+
+/* 2. Base */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; background: var(--black); }
+body {
+  margin: 0;
+  color: var(--cream);
+  background: var(--black);
+  font-family: "DM Sans", Arial, sans-serif;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 50% -10%, rgba(215, 169, 47, 0.17), transparent 38rem),
+    linear-gradient(115deg, transparent 0 49.5%, rgba(215, 169, 47, 0.035) 49.6% 49.7%, transparent 49.8%);
+}
+
+/* 3. Accessibility */
+.skip { position: absolute; left: -10000px; top: auto; }
+.skip:focus {
+  left: 18px;
+  top: 18px;
+  z-index: 50;
+  padding: 10px 14px;
+  color: #111;
+  background: var(--gold-light);
+}
+
+/* 4. Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 77px;
+  padding: 12px clamp(20px, 5vw, 78px);
+  border-bottom: 1px solid var(--line);
+  background: rgba(9, 9, 8, 0.91);
+  backdrop-filter: blur(14px);
+}
+.identity { display: flex; align-items: center; gap: 15px; }
+.mark {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--gold);
+  color: var(--gold-light);
+  font: 700 20px/1 Georgia, serif;
+  transform: rotate(45deg);
+}
+.mark span { transform: rotate(-45deg); }
+.brand-name { font-size: 11px; font-weight: 600; letter-spacing: 0.21em; }
+.brand-name small {
+  display: block;
+  margin-top: 4px;
+  color: var(--gold);
+  font-size: 8px;
+  letter-spacing: 0.29em;
+}
+.menu-link {
+  color: var(--gold-light);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* 5. Intro */
+.intro {
+  display: grid;
+  min-height: 360px;
+  place-items: center;
+  padding: 75px 24px 68px;
+  text-align: center;
+}
+.eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  margin: 0 0 20px;
+  color: var(--gold);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+.eyebrow::before,
+.eyebrow::after {
+  content: "";
+  width: 42px;
+  height: 1px;
+  background: var(--gold);
+}
+.intro h1 {
+  margin: 0;
+  font: 600 clamp(46px, 8vw, 88px) / 0.93 "Playfair Display", Georgia, serif;
+  letter-spacing: -0.05em;
+}
+.intro h1 span { color: var(--gold-light); }
+.intro-description {
+  max-width: 430px;
+  margin: 22px auto 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* 6. Menu images */
+.menu { padding: 0 20px 82px; }
+.menu-rule {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: min(100%, 980px);
+  margin: 0 auto 18px;
+}
+.menu-rule::before,
+.menu-rule::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+.menu-rule span {
+  color: var(--gold);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+.menu-pages { width: min(100%, 980px); margin: auto; }
+.menu-page {
+  position: relative;
+  margin: 0 0 30px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  background: linear-gradient(135deg, rgba(215, 169, 47, 0.17), rgba(255, 255, 255, 0.018));
+  box-shadow: 0 24px 66px rgba(0, 0, 0, 0.44);
+}
+.menu-page::after {
+  content: attr(data-page);
+  position: absolute;
+  right: 18px;
+  bottom: 17px;
+  color: var(--gold);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  opacity: 0.82;
+}
+.menu-page img { display: block; width: 100%; height: auto; background: #111; }
+
+/* 7. Footer */
+.site-footer {
+  padding: 27px 24px;
+  border-top: 1px solid var(--line);
+  color: #8c8576;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* 8. Small screens */
+@media (max-width: 540px) {
+  .site-header { min-height: 67px; padding-inline: 18px; }
+  .brand-name { font-size: 9px; }
+  .menu-link { font-size: 9px; }
+  .intro { min-height: 310px; padding-top: 58px; }
+  .menu { padding-inline: 12px; }
+  .menu-page { margin-bottom: 20px; padding: 6px; }
+}
