@@ -1,0 +1,718 @@
+/* ==========================================================================
+   TIGER 136 — Lounge · Whiskey · VIP KTV
+   Main Stylesheet
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Custom Properties (Design Tokens)
+   -------------------------------------------------------------------------- */
+
+:root {
+  --bg: #070909;
+  --panel: #0d1110;
+  --gold: #d7a82e;
+  --gold2: #f4d56b;
+  --text: #f4f1e9;
+  --muted: #aaa79d;
+  --line: rgba(215, 168, 46, 0.28);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --------------------------------------------------------------------------
+   2. Reset & Base
+   -------------------------------------------------------------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   3. Layout
+   -------------------------------------------------------------------------- */
+
+.container {
+  width: min(1180px, 92%);
+  margin: auto;
+}
+
+section {
+  padding: 105px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+/* --------------------------------------------------------------------------
+   4. Typography Helpers
+   -------------------------------------------------------------------------- */
+
+.small {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   5. Navbar
+   -------------------------------------------------------------------------- */
+
+nav {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(7, 9, 9, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--line);
+  transition: background 0.4s var(--ease-smooth);
+}
+
+.navin {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--gold2);
+  transition: opacity 0.3s;
+}
+
+.brand:hover {
+  opacity: 0.8;
+}
+
+.navlinks {
+  display: flex;
+  gap: 24px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #ddd;
+}
+
+.navlinks a {
+  transition: color 0.3s var(--ease-smooth);
+}
+
+.navlinks a:hover {
+  color: var(--gold2);
+}
+
+.navcta {
+  padding: 10px 16px;
+  border: 1px solid var(--gold);
+  color: var(--gold2);
+  border-radius: 999px;
+  transition:
+    background 0.3s var(--ease-smooth),
+    color 0.3s var(--ease-smooth);
+}
+
+.navcta:hover {
+  background: var(--gold);
+  color: #080908;
+}
+
+/* --------------------------------------------------------------------------
+   6. Hero
+   -------------------------------------------------------------------------- */
+
+.hero {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4, 6, 6, 0.92),
+      rgba(4, 6, 6, 0.38),
+      rgba(4, 6, 6, 0.88)
+    ),
+    url("../images/cover.webp") center / cover no-repeat;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    transparent 15%,
+    rgba(0, 0, 0, 0.55) 90%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 120px 20px 80px;
+}
+
+/* Hero entrance animations */
+.hero .kicker {
+  animation: fadeUp 0.8s var(--ease-out) 0.2s both;
+}
+
+.hero h1 {
+  animation: fadeUp 0.8s var(--ease-out) 0.4s both;
+}
+
+.hero p {
+  animation: fadeUp 0.8s var(--ease-out) 0.6s both;
+}
+
+.hero .buttons {
+  animation: fadeUp 0.8s var(--ease-out) 0.8s both;
+}
+
+.hero .hero-meta {
+  animation: fadeUp 0.8s var(--ease-out) 1s both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.kicker {
+  font-size: 12px;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: var(--gold2);
+}
+
+h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(72px, 12vw, 150px);
+  line-height: 0.8;
+  margin: 25px 0;
+  color: #f5ce57;
+  letter-spacing: 0.03em;
+  text-shadow: 0 10px 50px #000;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 28px auto;
+  color: #ddd;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.hero-meta {
+  margin-top: 55px;
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  flex-wrap: wrap;
+  color: #bbb;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+/* --------------------------------------------------------------------------
+   7. Buttons
+   -------------------------------------------------------------------------- */
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.btn {
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    transform 0.25s var(--ease-out),
+    box-shadow 0.3s var(--ease-smooth),
+    background 0.3s var(--ease-smooth),
+    border-color 0.3s var(--ease-smooth);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn.gold {
+  background: var(--gold);
+  color: #080908;
+}
+
+.btn.gold:hover {
+  background: var(--gold2);
+  box-shadow: 0 8px 32px rgba(215, 168, 46, 0.3);
+}
+
+.btn.ghost {
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.btn.ghost:hover {
+  border-color: var(--gold);
+  background: rgba(215, 168, 46, 0.08);
+}
+
+/* --------------------------------------------------------------------------
+   8. Section Headers
+   -------------------------------------------------------------------------- */
+
+.section-head {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 54px;
+  margin: 10px 0 8px;
+  color: #f1d46e;
+}
+
+.section-head p {
+  color: var(--muted);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   9. Category Bar (Sticky Menu Nav)
+   -------------------------------------------------------------------------- */
+
+.category-bar {
+  position: sticky;
+  top: 70px;
+  z-index: 10;
+  background: rgba(7, 9, 9, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  overflow-x: auto;
+  overflow-y: hidden;
+  /* Hide scrollbar but keep scrollable */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.category-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.category-bar .container {
+  display: flex;
+  gap: 8px;
+  padding: 12px 0;
+  white-space: nowrap;
+}
+
+.category-bar a {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 9px 13px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  color: #c9c6bc;
+  transition:
+    border-color 0.3s var(--ease-smooth),
+    color 0.3s var(--ease-smooth),
+    background 0.3s var(--ease-smooth);
+}
+
+.category-bar a:hover {
+  border-color: var(--gold);
+  color: var(--gold2);
+}
+
+.category-bar a.active {
+  border-color: var(--gold);
+  color: var(--gold2);
+  background: rgba(215, 168, 46, 0.1);
+}
+
+/* --------------------------------------------------------------------------
+   10. Menu Grid & Cards
+   -------------------------------------------------------------------------- */
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.menu-card {
+  background: linear-gradient(145deg, #101412, #0a0d0c);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 18px;
+  padding: 22px;
+  transition:
+    border-color 0.4s var(--ease-smooth),
+    box-shadow 0.4s var(--ease-smooth);
+}
+
+.menu-card:hover {
+  border-color: rgba(215, 168, 46, 0.18);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+}
+
+.menu-card h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  color: var(--gold2);
+  margin: 0 0 16px;
+}
+
+/* --------------------------------------------------------------------------
+   11. Menu Items
+   -------------------------------------------------------------------------- */
+
+.item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  padding: 11px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: background 0.25s var(--ease-smooth);
+}
+
+.item:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+.item-name {
+  font-size: 14px;
+}
+
+.item-sub {
+  font-size: 10px;
+  color: #777;
+  margin-top: 3px;
+}
+
+.price {
+  color: var(--gold2);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.note {
+  font-size: 12px;
+  color: #8e8b83;
+  line-height: 1.7;
+  margin-top: 18px;
+}
+
+/* --------------------------------------------------------------------------
+   12. Feature (Signature Section)
+   -------------------------------------------------------------------------- */
+
+.feature {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.feature-image {
+  min-height: 480px;
+  border-radius: 24px;
+  background: url("../images/p1.webp") center / cover no-repeat;
+  border: 1px solid var(--line);
+  transition: transform 0.6s var(--ease-out);
+}
+
+.feature-image:hover {
+  transform: scale(1.015);
+}
+
+.feature-copy {
+  background: linear-gradient(145deg, #14130e, #0c0f0e);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 42px;
+}
+
+.feature-copy h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 46px;
+  color: var(--gold2);
+  margin: 0 0 15px;
+}
+
+.feature-copy p {
+  color: #aaa;
+  line-height: 1.8;
+}
+
+.price-list {
+  margin-top: 28px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 13px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background 0.25s var(--ease-smooth);
+}
+
+.price-row:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* --------------------------------------------------------------------------
+   13. Gallery
+   -------------------------------------------------------------------------- */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition:
+    transform 0.5s var(--ease-out),
+    border-color 0.4s var(--ease-smooth);
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+  border-color: rgba(215, 168, 46, 0.2);
+}
+
+/* --------------------------------------------------------------------------
+   14. CTA Section
+   -------------------------------------------------------------------------- */
+
+.cta {
+  padding: 100px 0;
+  text-align: center;
+  background:
+    linear-gradient(rgba(6, 8, 8, 0.72), rgba(6, 8, 8, 0.94)),
+    url("../images/cover.webp") center / cover fixed;
+}
+
+.cta h2 {
+  font-size: 68px;
+}
+
+/* --------------------------------------------------------------------------
+   15. Footer
+   -------------------------------------------------------------------------- */
+
+footer {
+  padding: 55px 0 80px;
+  text-align: center;
+  color: #888;
+}
+
+.footer-brand {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 42px;
+  color: var(--gold2);
+}
+
+/* --------------------------------------------------------------------------
+   16. Scroll Reveal Animations (CSS-driven via IntersectionObserver)
+   -------------------------------------------------------------------------- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.7s var(--ease-out),
+    transform 0.7s var(--ease-out);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children within a grid */
+.reveal-stagger > .menu-card,
+.reveal-stagger > .gallery img,
+.reveal-stagger > div {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.6s var(--ease-out),
+    transform 0.6s var(--ease-out);
+}
+
+.reveal-stagger.visible > .menu-card,
+.reveal-stagger.visible > .gallery img,
+.reveal-stagger.visible > div {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger.visible > :nth-child(1) {
+  transition-delay: 0.05s;
+}
+.reveal-stagger.visible > :nth-child(2) {
+  transition-delay: 0.12s;
+}
+.reveal-stagger.visible > :nth-child(3) {
+  transition-delay: 0.19s;
+}
+.reveal-stagger.visible > :nth-child(4) {
+  transition-delay: 0.26s;
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .reveal-stagger > * {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   17. Responsive (≤ 800px)
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 800px) {
+  .navlinks {
+    display: none;
+  }
+
+  .navin {
+    height: 62px;
+  }
+
+  .navcta {
+    padding: 9px 12px;
+  }
+
+  .category-bar {
+    top: 62px;
+  }
+
+  .hero {
+    min-height: 92vh;
+  }
+
+  .hero-content {
+    padding-top: 90px;
+  }
+
+  .menu-grid,
+  .columns,
+  .feature {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-image {
+    min-height: 360px;
+  }
+
+  section {
+    padding: 75px 0;
+  }
+
+  h2 {
+    font-size: 44px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery img {
+    height: 280px;
+  }
+
+  .cta h2 {
+    font-size: 48px;
+  }
+}

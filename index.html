@@ -1,110 +1,571 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#080807" />
-    <title>TIGER BAR 136 | Menu</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TIGER 136 — Lounge · Whiskey · VIP KTV</title>
+    <meta
+      name="description"
+      content="Tiger 136 — premium pours, cocktails, beer and VIP KTV in Phnom Penh."
+    />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- All page styling is kept in this separate file. -->
-    <link rel="stylesheet" href="tiger-bar-136-menu.css" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- Keyboard accessibility link -->
-    <a class="skip" href="#menu">Skip to menu</a>
+    <!-- ===== Navbar ===== -->
+    <nav>
+      <div class="container navin">
+        <a class="brand" href="#top">TIGER 136</a>
+        <div class="navlinks">
+          <a href="#menu">Menu</a>
+          <a href="#whisky">Whisky</a>
+          <a href="#cocktails">Cocktails</a>
+          <a href="#beer">Beer</a>
+          <a href="#experience">Experience</a>
+        </div>
+        <a class="navcta" href="tel:+85593298007">Book / Call</a>
+      </div>
+    </nav>
 
-    <!-- Site header: edit the bar name and small text here. -->
-    <header class="site-header">
-      <div class="identity" aria-label="Tiger Bar 136">
-        <div class="mark"><span>T</span></div>
-        <div class="brand-name">
-          TIGER BAR 136
-          <small>LOUNGE · WHISKEY · VIP KTV</small>
+    <!-- ===== Hero ===== -->
+    <header class="hero" id="top">
+      <div class="hero-content">
+        <div class="kicker">Lounge · Whiskey · VIP KTV</div>
+        <h1>TIGER 136</h1>
+        <p>
+          Premium pours, cocktails, cold beer and private VIP KTV — designed for
+          nights that start with a drink and end with a story.
+        </p>
+        <div class="buttons">
+          <a class="btn gold" href="#menu">Explore Menu</a>
+          <a class="btn ghost" href="tel:+85593298007">Reserve Your Table</a>
+        </div>
+        <div class="hero-meta">
+          <span>Premium Whisky</span>
+          <span>VIP KTV Rooms</span>
+          <span>VIP Service</span>
+          <span>Private Atmosphere</span>
         </div>
       </div>
-      <a class="menu-link" href="#menu">Menu ↓</a>
     </header>
 
-    <!-- Introduction -->
-    <section class="intro" aria-labelledby="page-title">
-      <div>
-        <p class="eyebrow">The complete collection</p>
-        <h1 id="page-title">TIGER BAR <span>136</span></h1>
-        <p class="intro-description">
-          Premium pours, cocktails and more—presented in one uninterrupted menu
-          experience.
-        </p>
+    <!-- ===== Category Bar ===== -->
+    <div class="category-bar" id="menu">
+      <div class="container">
+        <a href="#signature">Signature</a>
+        <a href="#whisky">Whisky</a>
+        <a href="#spirits">Spirits</a>
+        <a href="#wine">Wine</a>
+        <a href="#beer">Beer</a>
+        <a href="#cocktails">Cocktails</a>
+        <a href="#soft">Soft Drinks</a>
+        <a href="#cigarettes">Cigarettes</a>
+        <a href="#lady-drinks">Lady Drinks</a>
+      </div>
+    </div>
+
+    <!-- ===== Signature Collection ===== -->
+    <section id="signature">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">The House Selection</div>
+          <h2>Signature Collection</h2>
+          <p>Premium bottles selected for the Tiger experience.</p>
+        </div>
+        <div class="feature reveal-stagger">
+          <div class="feature-image"></div>
+          <div class="feature-copy">
+            <h3>Pour Something Exceptional</h3>
+            <p>
+              Make the table yours with a premium bottle from our signature
+              collection. Perfect for celebrations, VIP tables and late-night
+              sessions.
+            </p>
+            <div class="price-list">
+              <div class="price-row">
+                <span>Speymhor 18Y · 700ml</span><b class="price">$210</b>
+              </div>
+              <div class="price-row">
+                <span>Macallan 12Y · 700ml</span><b class="price">$210</b>
+              </div>
+              <div class="price-row">
+                <span>Hennessy VSOP</span><b class="price">$195</b>
+              </div>
+              <div class="price-row">
+                <span>Chivas Regal 18Y · 750ml</span><b class="price">$145</b>
+              </div>
+              <div class="price-row">
+                <span>Gold Label · 700ml</span><b class="price">$115</b>
+              </div>
+              <div class="price-row">
+                <span>Gentleman Jack · 750ml</span><b class="price">$115</b>
+              </div>
+              <div class="price-row">
+                <span>Glenfiddich 12Y · 700ml</span><b class="price">$115</b>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!--
-    Menu images
-    To replace a menu page later, put the new image inside
-    the tiger-menu-images folder, then change only its src below.
-  -->
-    <main class="menu" id="menu">
-      <div class="menu-rule"><span>Menu</span></div>
+    <!-- ===== Whisky ===== -->
+    <section id="whisky">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Classic &amp; Premium</div>
+          <h2>Whisky</h2>
+          <p>
+            Easy pours for casual nights. Premium bottles for serious nights.
+          </p>
+        </div>
+        <div class="menu-grid reveal-stagger">
+          <div class="menu-card">
+            <h3>Premium Whisky</h3>
+            <div class="item">
+              <span>Ballantine Finest · 700ml</span
+              ><b class="price">$4 / $60</b>
+            </div>
+            <div class="item">
+              <span>Red Label · 750ml</span><b class="price">$4 / $60</b>
+            </div>
+            <div class="item">
+              <span>Jameson · 1L</span><b class="price">$4.50 / $90</b>
+            </div>
+            <div class="item">
+              <span>Ballantine 12Y · 700ml</span><b class="price">$6 / $75</b>
+            </div>
+            <div class="item">
+              <span>Jack Daniel · 700ml</span><b class="price">$6 / $80</b>
+            </div>
+            <div class="item">
+              <span>Chivas 12Y · 750ml</span><b class="price">$6 / $90</b>
+            </div>
+            <div class="item">
+              <span>Black Label · 750ml</span><b class="price">$7.50 / $90</b>
+            </div>
+            <div class="note">
+              Prices shown as Shot / Bottle where applicable.
+            </div>
+          </div>
+          <div class="menu-card">
+            <h3>Why Tiger Whisky</h3>
+            <p style="color: #aaa; line-height: 1.8">
+              From approachable classics to premium pours, the whisky list is
+              built for groups: order by the glass or make the night easy with a
+              bottle.
+            </p>
+            <div class="buttons" style="justify-content: flex-start">
+              <a class="btn gold" href="tel:+85593298007">Ask About VIP</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <section class="menu-pages" aria-label="Tiger Bar 136 full menu">
-        <figure class="menu-page" data-page="COVER">
-          <img
-            src="tiger-menu-images/page-1.webp"
-            alt="Tiger Bar 136 menu cover"
-          />
-        </figure>
+    <!-- ===== Spirits ===== -->
+    <section id="spirits">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Vodka · Gin · Rum · Tequila · Liqueur</div>
+          <h2>Spirits</h2>
+        </div>
+        <div class="menu-card reveal">
+          <div class="columns">
+            <div>
+              <div class="item">
+                <span>Bailey · 1L</span><b class="price">$4 / $75</b>
+              </div>
+              <div class="item">
+                <span>Cointreau · 1L</span><b class="price">$4 / $75</b>
+              </div>
+              <div class="item">
+                <span>Jagermeister · 1L</span><b class="price">$4 / $75</b>
+              </div>
+              <div class="item">
+                <span>Kahlua · 1L</span><b class="price">$4 / $75</b>
+              </div>
+              <div class="item">
+                <span>Bombay · 1L</span><b class="price">$4 / $75</b>
+              </div>
+              <div class="item">
+                <span>Gordon · 1L</span><b class="price">$4 / $72</b>
+              </div>
+              <div class="item">
+                <span>Bacardi Gold · 1L</span><b class="price">$4 / $72</b>
+              </div>
+              <div class="item">
+                <span>Bacardi White · 1L</span><b class="price">$4 / $72</b>
+              </div>
+            </div>
+            <div>
+              <div class="item">
+                <span>Captain Morgan Black · 1L</span
+                ><b class="price">$4 / $72</b>
+              </div>
+              <div class="item">
+                <span>Captain Morgan Gold · 1L</span
+                ><b class="price">$4 / $72</b>
+              </div>
+              <div class="item">
+                <span>Havana Club Reserva 3Y · 750ml</span
+                ><b class="price">$4 / $65</b>
+              </div>
+              <div class="item">
+                <span>Jose Cuervo White</span><b class="price">$4 / $75</b>
+              </div>
+              <div class="item">
+                <span>Jose Cuervo Gold</span><b class="price">$4 / $75</b>
+              </div>
+              <div class="item">
+                <span>Grey Goose</span><b class="price">$6 / $110</b>
+              </div>
+              <div class="item">
+                <span>Absolut</span><b class="price">$4 / $72</b>
+              </div>
+              <div class="item">
+                <span>Smirnoff Vodka</span><b class="price">$4 / $70</b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <figure class="menu-page" data-page="MENU · 01">
+    <!-- ===== Wine & More ===== -->
+    <section id="wine">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Wine · Champagne · Soju</div>
+          <h2>Wine &amp; More</h2>
+        </div>
+        <div class="menu-grid reveal-stagger">
+          <div class="menu-card">
+            <h3>Wine &amp; Champagne</h3>
+            <div class="item">
+              <span>Arama Airen Vino Espumante</span
+              ><b class="price">$35 bottle</b>
+            </div>
+            <div class="item">
+              <span>58 Bernard Margerey · 750ml</span
+              ><b class="price">$65 bottle</b>
+            </div>
+            <div class="item">
+              <span>Colombelle Red</span><b class="price">$7 / $30</b>
+            </div>
+            <div class="item">
+              <span>Colombelle White</span><b class="price">$7 / $30</b>
+            </div>
+          </div>
+          <div class="menu-card">
+            <h3>Soju</h3>
+            <div class="item">
+              <span>Jinro Chamisul</span><b class="price">$8 bottle</b>
+            </div>
+            <div class="item">
+              <span>Jinro Chamisul Case</span><b class="price">$140</b>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Beer ===== -->
+    <section id="beer">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Cold · Crisp · Easy</div>
+          <h2>Beer Collection</h2>
+        </div>
+        <div class="menu-grid reveal-stagger">
+          <div class="menu-card">
+            <h3>Bottled Beer</h3>
+            <div class="item">
+              <span>Hanuman Beer</span><b class="price">$4 / $96</b>
+            </div>
+            <div class="item">
+              <span>Hanuman Lite</span><b class="price">$4 / $96</b>
+            </div>
+            <div class="item">
+              <span>Hanuman Black</span><b class="price">$4.50 / $108</b>
+            </div>
+            <div class="item">
+              <span>Cambodia Premium</span><b class="price">$4 / $96</b>
+            </div>
+            <div class="item">
+              <span>Cambodia Black</span><b class="price">$4.50 / $108</b>
+            </div>
+            <div class="item">
+              <span>Vattanac Premium</span><b class="price">$4 / $96</b>
+            </div>
+            <div class="item">
+              <span>Vattanac Light</span><b class="price">$4 / $96</b>
+            </div>
+            <div class="item">
+              <span>Tiger Beer</span><b class="price">$4 / $96</b>
+            </div>
+            <div class="item">
+              <span>Tiger Crystal</span><b class="price">$4 / $96</b>
+            </div>
+            <div class="item">
+              <span>Heineken</span><b class="price">$4.50 / $96</b>
+            </div>
+            <div class="item">
+              <span>Anchor</span><b class="price">$4 / $96</b>
+            </div>
+            <div class="item">
+              <span>ABC Extra Stout</span><b class="price">$5 / $120</b>
+            </div>
+            <div class="item">
+              <span>Angkor</span><b class="price">$4 / $96</b>
+            </div>
+            <div class="item">
+              <span>Sapporo Premium</span><b class="price">$5 / $120</b>
+            </div>
+          </div>
+          <div class="menu-card">
+            <h3>Draught Beer</h3>
+            <div class="item">
+              <span>Hanuman Draft Beer</span><b class="price">$1.75</b>
+            </div>
+            <div class="item">
+              <span>Hanuman Draft Jug</span><b class="price">$7</b>
+            </div>
+            <div class="item">
+              <span>Hanuman Draft Tower</span><b class="price">$10</b>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Cocktails ===== -->
+    <section id="cocktails">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Classics &amp; Favorites</div>
+          <h2>Classic Cocktails</h2>
+          <p>Simple, familiar and ready for the night.</p>
+        </div>
+        <div class="menu-card reveal">
+          <div class="menu-grid">
+            <div>
+              <div class="item"><span>B52</span><b class="price">$5</b></div>
+              <div class="item">
+                <span>Blue Margarita</span><b class="price">$5</b>
+              </div>
+              <div class="item">
+                <span>Classic Margarita</span><b class="price">$5</b>
+              </div>
+              <div class="item">
+                <span>Jager Boom</span><b class="price">$5</b>
+              </div>
+              <div class="item">
+                <span>Long Island</span><b class="price">$6</b>
+              </div>
+            </div>
+            <div>
+              <div class="item"><span>Mojito</span><b class="price">$5</b></div>
+              <div class="item">
+                <span>Sexy On The Beach</span><b class="price">$5</b>
+              </div>
+              <div class="item">
+                <span>Singapore Sling</span><b class="price">$6</b>
+              </div>
+              <div class="item">
+                <span>Tequila Sunrise</span><b class="price">$5</b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Soft Drinks ===== -->
+    <section id="soft">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Refresh &amp; Mix</div>
+          <h2>Soft Drinks &amp; Mixers</h2>
+        </div>
+        <div class="menu-grid reveal-stagger">
+          <div class="menu-card">
+            <div class="item">
+              <span>Cambodia Water 500ml</span><b class="price">$1.50</b>
+            </div>
+            <div class="item">
+              <span>Coke Can</span><b class="price">$2.50</b>
+            </div>
+            <div class="item">
+              <span>Coke Zero Can</span><b class="price">$2.50</b>
+            </div>
+            <div class="item">
+              <span>Soda Can</span><b class="price">$2.50</b>
+            </div>
+            <div class="item">
+              <span>Tonic Can</span><b class="price">$2.50</b>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Cigarettes ===== -->
+    <section id="cigarettes">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Cigarettes</div>
+          <h2>Smokes</h2>
+        </div>
+        <div class="menu-card reveal">
+          <div class="menu-grid">
+            <div>
+              <div class="item">
+                <span>555 Original</span><b class="price">$3</b>
+              </div>
+              <div class="item">
+                <span>Marlboro White (Gold)</span><b class="price">$3</b>
+              </div>
+              <div class="item">
+                <span>Marlboro Red</span><b class="price">$3</b>
+              </div>
+            </div>
+            <div>
+              <div class="item">
+                <span>Meviuse Light (Blue Sky)</span><b class="price">$3</b>
+              </div>
+              <div class="item">
+                <span>Meviuse Original</span><b class="price">$3</b>
+              </div>
+              <div class="item">
+                <span>Esse Change (Blue)</span><b class="price">$3</b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Lady Drinks ===== -->
+    <section id="lady-drinks">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">For The Ladies</div>
+          <h2>Lady Drinks</h2>
+          <p
+            style="
+              color: #aaa;
+              max-width: 600px;
+              margin: 0 auto;
+              line-height: 1.7;
+            "
+          >
+            Buy Lady Drink, She Say You are Handsome; But Don't be Fooled, She
+            Say that to Everyone. So Be The Top "Giver" !
+          </p>
+        </div>
+        <div class="menu-card reveal">
+          <div class="menu-grid">
+            <div>
+              <div class="item">
+                <span>Lady Charge</span><b class="price">$35</b>
+              </div>
+              <div class="item">
+                <span>Lady Drink Beer Btl</span><b class="price">$6</b>
+              </div>
+              <div class="item">
+                <span>Lady Drink (Draught)</span><b class="price">$4</b>
+              </div>
+            </div>
+            <div>
+              <div class="item">
+                <span>Lady Drink Whisky/Rum/Gin/Vodka/Jimbeam</span
+                ><b class="price">$6</b>
+              </div>
+              <div class="item">
+                <span>Lady Drink Wine Comlombelle</span><b class="price">$6</b>
+              </div>
+              <div class="item">
+                <span>Lady Drink Cocktail</span><b class="price">$6</b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Experience / Gallery ===== -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">More Than A Menu</div>
+          <h2>The Tiger Experience</h2>
+          <p>
+            Designed around premium drinks, private rooms and a memorable night
+            out.
+          </p>
+        </div>
+        <div class="gallery reveal-stagger">
           <img
-            src="tiger-menu-images/page-2.webp"
-            alt="Tiger Bar 136 menu page 1"
+            src="images/cover.webp"
+            alt="Tiger 136 atmosphere"
             loading="lazy"
           />
-        </figure>
-
-        <figure class="menu-page" data-page="MENU · 02">
           <img
-            src="tiger-menu-images/page-3.webp"
-            alt="Tiger Bar 136 menu page 2"
+            src="images/p1.webp"
+            alt="Tiger 136 premium whisky"
             loading="lazy"
           />
-        </figure>
-
-        <figure class="menu-page" data-page="MENU · 03">
           <img
-            src="tiger-menu-images/page-4.webp"
-            alt="Tiger Bar 136 menu page 3"
+            src="images/p3.webp"
+            alt="Tiger 136 beer collection"
             loading="lazy"
           />
-        </figure>
+        </div>
+      </div>
+    </section>
 
-        <figure class="menu-page" data-page="MENU · 04">
-          <img
-            src="tiger-menu-images/page-5.webp"
-            alt="Tiger Bar 136 menu page 4"
-            loading="lazy"
-          />
-        </figure>
+    <!-- ===== CTA ===== -->
+    <section class="cta">
+      <div class="container reveal">
+        <div class="eyebrow">Tonight at Tiger 136</div>
+        <h2>Your Night Starts Here.</h2>
+        <p
+          style="
+            max-width: 600px;
+            margin: 0 auto 28px;
+            color: #c9c6bc;
+            line-height: 1.8;
+          "
+        >
+          Book a table, ask about VIP KTV or simply come in for a drink.
+        </p>
+        <div class="buttons">
+          <a class="btn gold" href="tel:+85593298007">Call Tiger 136</a>
+          <a class="btn ghost" href="#menu">Back to Menu</a>
+        </div>
+      </div>
+    </section>
 
-        <figure class="menu-page" data-page="MENU · 05">
-          <img
-            src="tiger-menu-images/page-6.webp"
-            alt="Tiger Bar 136 menu page 5"
-            loading="lazy"
-          />
-        </figure>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      Tiger Bar 136 · Thank you for choosing Tiger 136
+    <!-- ===== Footer ===== -->
+    <footer>
+      <div class="container reveal">
+        <div class="footer-brand">TIGER 136</div>
+        <p class="small">Lounge · Whiskey · VIP KTV</p>
+        <p style="color: #777">Premium pours, cocktails &amp; more.</p>
+      </div>
     </footer>
+
+    <!-- Scripts (deferred for performance) -->
+    <script src="js/smooth.js" defer></script>
   </body>
 </html>
