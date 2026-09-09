@@ -483,9 +483,9 @@ h2 {
 }
 
 .feature-image {
-  min-height: 480px;
+  width: 100%;
+  height: auto;
   border-radius: 24px;
-  background: url("../images/p1.webp") center / cover no-repeat;
   border: 1px solid var(--line);
   transition: transform 0.6s var(--ease-out);
 }
