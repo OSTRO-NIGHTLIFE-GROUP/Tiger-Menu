@@ -617,6 +617,20 @@ h2 {
   color: #fff;
 }
 
+.promo-card figcaption .promo-meta {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* Two-up row: keep posters from blowing up to full column width */
+.promo-grid--two {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 720px;
+  margin: 0 auto;
+}
+
 /* --------------------------------------------------------------------------
    15. CTA Section
    -------------------------------------------------------------------------- */
