@@ -566,6 +566,19 @@ h2 {
   gap: 18px;
 }
 
+.promo-subhead {
+  text-align: center;
+  margin: 0 0 18px;
+}
+
+.promo-grid + .promo-subhead {
+  margin-top: 45px;
+}
+
+.promo-card {
+  margin: 0;
+}
+
 .promo-grid img {
   width: 100%;
   height: auto;
@@ -578,10 +591,30 @@ h2 {
     box-shadow 0.4s var(--ease-smooth);
 }
 
-.promo-grid img:hover {
+.promo-card:hover img {
   transform: translateY(-6px);
   border-color: rgba(215, 168, 46, 0.28);
   box-shadow: 0 12px 32px rgba(215, 168, 46, 0.15);
+}
+
+.promo-card figcaption {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.promo-card figcaption h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 26px;
+  color: var(--gold2);
+  margin: 0;
+}
+
+.promo-card figcaption .price {
+  font-size: 18px;
+  color: #fff;
 }
 
 /* --------------------------------------------------------------------------
@@ -636,7 +669,7 @@ footer {
 /* Stagger children within a grid */
 .reveal-stagger > .menu-card,
 .reveal-stagger > .gallery img,
-.reveal-stagger > .promo-grid img,
+.reveal-stagger > .promo-card,
 .reveal-stagger > div {
   opacity: 0;
   transform: translateY(30px);
@@ -647,7 +680,7 @@ footer {
 
 .reveal-stagger.visible > .menu-card,
 .reveal-stagger.visible > .gallery img,
-.reveal-stagger.visible > .promo-grid img,
+.reveal-stagger.visible > .promo-card,
 .reveal-stagger.visible > div {
   opacity: 1;
   transform: translateY(0);
